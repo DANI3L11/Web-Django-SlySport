@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Inicio | La Caffettiera</title>
+  <title>{% block title %}{% endblock %}</title>
 
   {% load static %}
 
@@ -30,8 +30,8 @@
 <body>
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
-    <span class="site-heading-upper text-primary mb-3">L'autentico caffè d'italia</span>
-    <span class="site-heading-lower">La Caffettiera</span>
+    <span class="site-heading-upper text-primary mb-3">Give your best!</span>
+    <span class="site-heading-lower">SlySports</span>
   </h1>
 
   <!-- Navegación -->
@@ -52,7 +52,7 @@
             <a class="nav-link text-uppercase text-expanded" href="{% url 'about' %}">Historia</a>
           </li>
           <li class="nav-item px-lg-4 {% if request.path == '/products/' %}active{% endif %}">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'products' %}">Servicios</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'products' %}">Productos</a>
           </li>
           <li class="nav-item px-lg-4 {% if request.path == '/store/' %}active{% endif %}">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'store' %}">Visítanos</a>
@@ -111,7 +111,7 @@
         ·{% endif %}
         {% endfor %}
       </p>
-      <p class="m-0 mbt1">&copy; La Caffettiera 2018</p>
+      <p class="m-0 mbt1">&copy; SlySports 2020</p>
     </div>
   </footer>
 
